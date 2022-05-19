@@ -54,6 +54,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   min-height: 60vh;
+  max-width: 800px;
   margin-left: 10vh;
   border-radius: 30px;
   background-color: var(--primary);
@@ -69,8 +70,8 @@ h1 {
 } */
 
 .catItem {
-  flex: 1 1 1 15%;
-  min-width: 25%;
+  flex: 1 1 1 30%;
+  width: 25%;
   margin: 20px;
   font-size: 12px;
   background-color: var(--light);
