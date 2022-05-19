@@ -2,13 +2,12 @@ import React from 'react';
 import '../App.css';
 import {useEffect, useState} from 'react';
 
-const Data = (props)=>{
+const Images = (props)=>{
 
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
 
-
-    // useEffect to track changes and fetch to pull from API 
+    // 'useEffect' to track changes and 'fetch' to pull images from API 
     useEffect(()=>{
         const fetchCatPics = async()=>{
             const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
@@ -32,14 +31,12 @@ const Data = (props)=>{
          }
          )
 
-
 return(
     <div>
     <h1>Cats 4 Lyfe API</h1>
     {listObject}
-
     </div>
 )
 
-}// End of data
-export default Data;
+}// End of Images
+export default Images;
