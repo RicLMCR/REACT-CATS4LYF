@@ -7,6 +7,7 @@ export function App() {
   return (
 
     <div className="App">
+          <h1> Ric's Change</h1>
       <div className="container">
         <h1>CATS4LYF</h1>
         <div className="catBox">
