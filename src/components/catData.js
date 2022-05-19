@@ -1,0 +1,9 @@
+
+    
+    
+    
+    catData () {
+   
+    faker.animal.cat()
+  
+    }

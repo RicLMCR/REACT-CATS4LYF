@@ -1,6 +1,7 @@
 import React from 'react';
 import '../App.css';
 import {useEffect, useState} from 'react';
+import faker from "@faker-js/faker"
 
 const Images = (props)=>{
 
@@ -16,7 +17,9 @@ const Images = (props)=>{
             for (let i=0; i < data.length; i++){
                 data[i]={
                     url:data[i].url,
-                    name: "Lee" // replace with {fake.name}
+                    name: faker.name.firstName(),
+                    price: faker.finance.amount(60, 250, 0, '£')
+                
                 }
             }
             setCatPics(data);
