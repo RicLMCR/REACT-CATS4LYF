@@ -1,3 +1,103 @@
-body{
-    background-color: aqua;
+.App {
+  text-align: center;
+}
+
+:root {
+  --primary: #f4d35e;
+  --secondary: #f95738;
+  --tertiary: #ee964b;
+  --dark: #0d3b66;
+  --light: #faf0ca;
+}
+
+* {
+  margin: 5px;
+  padding: 5px;
+
+  box-sizing: border-box;
+  font-family: monospace;
+}
+
+body {
+  background-color: var(--light);
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h1 {
+  min-width: 60vh;
+  margin-bottom: 33vh;
+  margin-left: 10vh;
+  background-color: var(--primary);
+  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+}
+
+.basket {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  min-height: 100vh;
+  min-width: fit-content;
+  padding: 20px;
+  background-color: var(--primary);
+  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+}
+
+.catBox {
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 60vh;
+  max-width: 800px;
+  margin-left: 10vh;
+  border-radius: 30px;
+  background-color: var(--primary);
+  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+}
+
+/* This is how we show a display box if needed for a stretch goal */
+
+/* .display {
+  position: absolute;
+  display: hidden;
+  overflow: hidden;
+} */
+
+.catItem {
+  flex: 1 1 1 30%;
+  width: 25%;
+  margin: 20px;
+  font-size: 12px;
+  background-color: var(--light);
+  box-shadow: 0px 4px 20px 2px black, 2px 2px 2px 2px;
+}
+
+img {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+.addToBasket {
+  position: relative;
+  width: 120px;
+  height: 25px;
+  margin: 10px;
+  background-color: var(--secondary);
+  border-radius: 30px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  line-height: 18px;
+  box-shadow: 1px 1px 1px var(--secondary);
+}
+
+.addToBasket:hover {
+  background-color: var(--primary);
+  color: var(--dark);
 }
