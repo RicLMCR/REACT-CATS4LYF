@@ -3,7 +3,7 @@ import '../App.css';
 import {useEffect, useState} from 'react';
 import faker from "@faker-js/faker"
 
-const Images = (props)=>{
+const Images = ()=>{
 
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
@@ -12,14 +12,13 @@ const Images = (props)=>{
     useEffect(()=>{
         const fetchCatPics = async()=>{
             const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
-            // Loop through array and add additional key vaue pairs including name, price etc
+            // Loop through array and add additional key vaue pairs to the catPics object, including name, price etc
             const data = await response.json();
             for (let i=0; i < data.length; i++){
                 data[i]={
                     url:data[i].url,
                     name: faker.name.firstName(),
                     price: faker.finance.amount(60, 250, 0, '£')
-                
                 }
             }
             setCatPics(data);
@@ -28,15 +27,16 @@ const Images = (props)=>{
         fetchCatPics();
     },[])
 
-    // Function to map all images pulled from API. NOTE: This needs to be blended with the cat information somehow
-    const listObject = catPics.map((pic,index)=>{
+    // Function to map all images pulled from API and data from FakeData
+        const listObject = catPics.map((pic,index)=>{
         console.log({pic})
            return(
              <div>
-
-            <div className="catItem">            
-                <div className="addToBasket">Add to basket!</div>
-                   <img key={index} src={pic.url} alt="Random cat pic"/>
+                <div className="catItem">            
+                    <img key={index} src={pic.url} alt="Random cat pic"/>
+                    <div className="addToBasket">Add to basket!</div>
+                    <p>{pic.name}</p>
+                    <p>{pic.price}</p>
                 </div>
              </div>
            )
