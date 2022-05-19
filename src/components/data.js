@@ -11,8 +11,7 @@ const Data = (props)=>{
     // useEffect to track changes and fetch to pull from API 
     useEffect(()=>{
         const fetchCatPics = async()=>{
-            // const response = await fetch('api_key=fd99a4be-f585-4000-8ac0-b1a5ec018a61');
-            const response = await fetch('https://zoo-animal-api.herokuapp.com/animals/rand/5');
+            const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
             const data = await response.json();
             setCatPics(data);
             console.log(data)
@@ -26,7 +25,7 @@ const Data = (props)=>{
            return(
              <div>
                <div className="box">
-             <h1 key={index}>{pic.name}</h1>
+                   <img key={index} src={pic.url} alt="Random cat pic"/>
              </div>
              </div>
            )
@@ -37,8 +36,8 @@ const Data = (props)=>{
 return(
     <div>
     <h1>Cats 4 Lyfe API</h1>
-
     {listObject}
+
     </div>
 )
 

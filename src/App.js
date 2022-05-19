@@ -1,7 +1,7 @@
-import './App.css';
-import Data from './components/data.js';
 import React from 'react';
 import {useEffect, useState} from 'react';
+import './App.css';
+import './components/data';
 
 export function App() {
 
@@ -49,24 +49,5 @@ export function App() {
           </div>
           <div className="catItem">Cat 9 Pic
 
-            <div className="addToBasket">Add to basket!</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="basket">
-        <h2>Your Cats</h2>
-        <div>Items should list here</div>
-      </div>
-
-    </div>
-  );
-}// End of App
+)}// End of App
 export default App;
-
-
-// const Data = ()=>{
-//   return(
-//     <h1>Test Data </h1>
-//   )
-// }
