@@ -11,7 +11,14 @@ const Images = (props)=>{
     useEffect(()=>{
         const fetchCatPics = async()=>{
             const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
+            // Loop through array and add additional key vaue pairs including name, price etc
             const data = await response.json();
+            for (let i=0; i < data.length; i++){
+                data[i]={
+                    url:data[i].url,
+                    name: "Lee" // replace with {fake.name}
+                }
+            }
             setCatPics(data);
             console.log(data)
         };
