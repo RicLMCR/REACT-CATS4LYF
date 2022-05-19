@@ -1,7 +1,15 @@
 import './App.css';
 import './components/data';
 import React from 'react';
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from 'react';
+import { faker } from "@faker-js/faker";
+
+let catCat = faker.animal.cat()
+let catPic = faker.image.cats()
+let catPrice = faker.finance.amount()
+
+let arrCat = [catCat, catPic, catPrice]
+}
 
 export function App() {
   return (
@@ -11,7 +19,7 @@ export function App() {
         <h1>CATS4LYF</h1>
         <div className="catBox">
           <div className="catItem">Cat 1 Pic
-
+            {faker.fake((item, index))}
             <div className="addToBasket">Add to basket!</div>
           </div>
           <div className="catItem">Cat 2 Pic
