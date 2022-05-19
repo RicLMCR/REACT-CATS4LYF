@@ -7,7 +7,7 @@ import './components/data';
 
 function App() {
   return (
-<h1> App.JS</h1>
+<h1>App.JS</h1>
 
   )
 }// End of App
