@@ -1,14 +1,27 @@
 import './App.css';
 import './components/data';
-import React from 'react';
+import React, { Component } from 'react';
 import { useEffect, useState } from 'react';
+import catGenerator from "catGenerator.js"
+
+
+// class App extends Component {
+//     constructor(props) {
+//       super(props);
+//       this.state = {
+//         items: [],
+//         isloaded: false,
+//       }
+//     }
+
 import { faker } from "@faker-js/faker";
 
-let catCat = faker.animal.cat()
-let catPic = faker.image.cats()
-let catPrice = faker.finance.amount()
-
-let arrCat = [catCat, catPic, catPrice]
+function generate() {
+    let catCat = faker.animal.cat()
+    let catPic = faker.image.cats()
+    let catPrice = faker.finance.amount()
+    let arrCat = [catCat, catPic, catPrice]
+    return arrCat
 }
 
 export function App() {
@@ -18,8 +31,9 @@ export function App() {
       <div className="container">
         <h1>CATS4LYF</h1>
         <div className="catBox">
-          <div className="catItem">Cat 1 Pic
-            {faker.fake((item, index))}
+          <div className="catItem" key="1">
+            <div>{generate}</div>
+            
             <div className="addToBasket">Add to basket!</div>
           </div>
           <div className="catItem">Cat 2 Pic
