@@ -1,13 +1,17 @@
 import './App.css';
-import './components/data';
+import Data from './components/data.js';
 import React from 'react';
 import {useEffect, useState} from 'react';
 
 export function App() {
+
   return (
 
     <div className="App">
-          <h1> Ric's Change</h1>
+
+    <Data/>
+
+      <h1> Ric's Change</h1>
       <div className="container">
         <h1>CATS4LYF</h1>
         <div className="catBox">
@@ -59,3 +63,10 @@ export function App() {
   );
 }// End of App
 export default App;
+
+
+// const Data = ()=>{
+//   return(
+//     <h1>Test Data </h1>
+//   )
+// }
