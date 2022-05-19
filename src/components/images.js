@@ -30,13 +30,15 @@ const Images = (props)=>{
         console.log({pic})
            return(
              <div>
-               <div className="box">
+
+            <div className="catItem">            
+                <div className="addToBasket">Add to basket!</div>
                    <img key={index} src={pic.url} alt="Random cat pic"/>
-             </div>
+                </div>
              </div>
            )
          }
-         )
+    )
 
 return(
     <div>
