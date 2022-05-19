@@ -6,13 +6,15 @@ import faker from "@faker-js/faker"
 const Images = ()=>{
 
     // Usestate for API objects
+    debugger;
     const [catPics, setCatPics]=useState([]);
 
     // 'useEffect' to track changes and 'fetch' to pull images from API 
     useEffect(()=>{
         const fetchCatPics = async()=>{
             const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
-            // Loop through array and add additional key vaue pairs to the catPics object, including name, price etc
+
+            // Loop through array and add additional key vaue pairs to the catPics object - name, price etc
             const data = await response.json();
             for (let i=0; i < data.length; i++){
                 data[i]={
@@ -45,7 +47,6 @@ const Images = ()=>{
 
 return(
     <div>
-    <h1>Cats 4 Lyfe API</h1>
     {listObject}
     </div>
 )
