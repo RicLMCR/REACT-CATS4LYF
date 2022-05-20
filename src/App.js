@@ -1,7 +1,7 @@
 import React from 'react';
 import {useEffect, useState} from 'react';
 import './App.css';
-import Images from './components/images';
+import Data from './components/data';
 
 function App() {
 
@@ -9,12 +9,16 @@ function App() {
 
     <div className="App">
 
-      <div className="container">
+      <div className="catContainer">
         <h1>CATS4LYF</h1>
-        <div className="catBox">
-        <Images />
-          </div>
+        
+        <Data />
+        
       </div>
+    <div className="basket">
+      
+    </div>
+
     </div>
 
 )}// End of App

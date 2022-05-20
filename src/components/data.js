@@ -3,10 +3,9 @@ import '../App.css';
 import {useEffect, useState} from 'react';
 import faker from "@faker-js/faker"
 
-const Images = ()=>{
+const Data = ()=>{
 
     // Usestate for API objects
-    debugger;
     const [catPics, setCatPics]=useState([]);
 
     // 'useEffect' to track changes and 'fetch' to pull images from API 
@@ -33,23 +32,22 @@ const Images = ()=>{
         const listObject = catPics.map((pic,index)=>{
         console.log({pic})
            return(
-             <div>
                 <div className="catItem">            
                     <img key={index} src={pic.url} alt="Random cat pic"/>
                     <div className="addToBasket">Add to basket!</div>
                     <p>{pic.name}</p>
                     <p>{pic.price}</p>
                 </div>
-             </div>
            )
          }
     )
 
 return(
-    <div>
+    <div className="catSelection">
     {listObject}
     </div>
+
 )
 
 }// End of Images
-export default Images;
+export default Data;
