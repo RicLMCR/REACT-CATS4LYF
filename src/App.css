@@ -149,6 +149,7 @@ img {
   font-weight: 700;
 }
 
+/* This is the "add to basket!" button */
 .addToBasket {
   position: relative;
   width: 120px;

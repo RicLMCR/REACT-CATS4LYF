@@ -3,10 +3,14 @@ import '../App.css';
 import {useEffect, useState} from 'react';
 import faker from "@faker-js/faker"
 
-const Data = ()=>{
+const Data = (props)=>{
 
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
+    // Usestate for basketObjects
+    const addToBasket = (data) => {
+      props.setBasketFun([...props.basketData, data]);
+    };
 
 
     //** array to store selected data - to be used by shopping basket */
@@ -24,6 +28,8 @@ const Data = ()=>{
                     url:data[i].url,
                     name: faker.name.firstName(),
                     price: faker.finance.amount(60, 250, 0, '£')
+                    
+                
                 }
             }
             setCatPics(data);
@@ -36,24 +42,43 @@ const Data = ()=>{
         const listObject = catPics.map((pic,index)=>{
         console.log({pic})
            return(
+             <div>
                 <div className="catItem">            
                     <img key={index} src={pic.url} alt="Random cat pic"/>
                         <div className='catInfo'>
                             <p>{pic.name}</p>
                             <p>{pic.price}</p>
-                        </div>
-                    <div className="addToBasket">Add to basket!</div>    
+                        </div>   
                 </div>
+                <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
+              </div>
            )
+
+          
+        }
+        
            //** function to push the 'pic.name' and 'pic.price' data into a new array (outside of the of the function). Then the 'putchase'buttn ncan add these values to that array onClick
          }
-    )
 
-return(
+    )
+    // commented this out. Function is now part of html tag in basket file
+    // function addToBasket(pic) {
+    // setBasket([...basket, pic.name, pic.price]);
+    // return (
+    //   <div>
+    //     <div className="basket"></div>
+    //   </div>;
+
+  return (
     <div className="catSelection">
-    {listObject}
+      {listObject}
     </div>
+
+
+  );
+
 )
+
 
 }// End of Images
 export default Data;

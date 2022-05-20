@@ -2,8 +2,10 @@ import React from 'react';
 import {useEffect, useState} from 'react';
 import './App.css';
 import Data from './components/data';
+import ShoppingBasket from './shoppingBasket.js';
 
 function App() {
+  const [basket, setBasket] = useState([])
 
   return (
 
@@ -16,16 +18,19 @@ function App() {
         <div className='content'> 
           <div className="catContainer">
     
-          <Data />
+          <Data setBasketFun={setBasket} basketData={basket}/>
         
           </div>
           <div className="basket">
-      
+
+          <ShoppingBasket basketData={basket}/>
+
           </div>
         </div>   
 
     </div>
 
 )}// End of App
+
 
 export default App;
