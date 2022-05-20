@@ -1,5 +1,5 @@
 import React from 'react';
-import {useEffect, useState} from 'react';
+import {useState} from 'react';
 import './App.css';
 import Data from './components/data';
 import ShoppingBasket from './shoppingBasket.js';

@@ -12,12 +12,13 @@
   --lightest-grey: #E5ECE9;
   --hot-pink-dark: #C60F7B;
   --hot-pink-light: #F90093;
+  --hot-pink-lightest: #ff78c7;
 
-  --primary: #f4d35e;
+  /* --primary: #f4d35e;
   --secondary: #f95738;
   --tertiary: #ee964b;
   --dark: #0d3b66;
-  --light: #faf0ca;
+  --light: #faf0ca; */
 }
 
 * {
@@ -32,12 +33,15 @@ body {
 }
 
 /************************************************* Typefaces ****************************************************/
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: 12vh;
+  font-size: 10vh;
   padding: 15vh 0 0 3vh;
   min-width: 60vh;
 }
@@ -53,7 +57,7 @@ p {
   font-size: 2.5vh;
 }
 
-.header{
+.header {
   height: 80vh;
   display: flex;
   flex-direction: column;
@@ -65,12 +69,19 @@ p {
   background-repeat: no-repeat;
 }
 
-.header>h1,h2{
+.header>h1,
+h2 {
   font-weight: 900;
+
 }
 
-.header>h1{
+.header>h1 {
   color: var(--black);
+}
+
+.header>h2 {
+  color: var(--hot-pink-light);
+  padding: 1vh 0 0 3vh;
 }
 
 
@@ -124,33 +135,34 @@ p {
   /* flex: 1 1 1 30%; */
   width: 250px;
   height: 250px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   padding: 2vh;
-  margin: 2vh;
+  margin: 0 2vh 2vh 2vh;
   font-size: 12px;
   background-color: var(--lightest-grey);
 }
 
-img {
+.mainImage {
   height: 150px;
   width: 230px;
   object-fit: cover;
 }
 
-.catInfo{
+.catInfo {
   display: flex;
   flex-direction: row;
   padding: 1vh;
 }
 
-.catInfo>p{
+.catInfo>p {
   margin: 1vh 4vh 1vh 0;
   font-weight: 700;
 }
 
 /* This is the "add to basket!" button */
 .addToBasket {
+  border-style: none;
   position: relative;
   width: 120px;
   height: 25px;
@@ -168,8 +180,9 @@ img {
 }
 
 .addToBasket:hover {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--hot-pink-lightest);
+  color: var(--white);
+  transition: .5s;
 }
 
 /************************************************* Shopping Basket ****************************************************/
@@ -177,9 +190,42 @@ img {
 .basket {
   width: 25%;
   height: auto;
+  display: flex;
   flex-direction: column;
-  /* flex-wrap: nowrap; */
-  /* min-height: 100vh; */
-  /* min-width: fit-content; */
+  padding: 3vh 3vh 0 3vh;
   background-color: var(--hot-pink-dark);
+}
+
+.basket>h2 {
+  font-size: 4vh;
+  color: var(--white);
+  padding-bottom: 3vh;
+}
+
+.purchaseSummary {
+  width: 40vh;
+  padding-bottom: 2vh;
+  color: var(--white);
+  display: flex;
+  border-bottom: 2px solid var(--hot-pink-lightest);
+  margin-bottom: 2vh;
+}
+
+.purchaseInfoContainer {
+  padding-left: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.basketImage {
+  height: 65px;
+  width: 100px;
+  object-fit: cover;
+  border: 3px solid var(--hot-pink-lightest);
+}
+
+.price{
+  font-weight: 600;
 }

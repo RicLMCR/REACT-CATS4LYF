@@ -9,25 +9,26 @@ function ShoppingBasket(props) {
         props.setBasketFun(remover);
     };
         return (
-
-            <div>
                 <div className="basket">
-                    <h1>Your Cats</h1>
+                    <h2>Your Selection</h2>
                     <div>
                         {props.basketData.map((catItem, index) => {
                             return (
-                                <div>
-                                    <img key={index} src={catItem.url} alt="cat basket"/>
-                                    <p>{catItem.name}</p>
-                                    <p>{catItem.price}</p>
-                                    <button className="removeFromBasket" onClick={() => removeFromBasket(index)}>Remove from basket</button>
+                                <div className="purchaseSummary">
+                                    <img className="basketImage" key={index} src={catItem.url} alt="cat basket"/>
+                                    <div className="purchaseInfoContainer">
+                                        <p>{catItem.name}</p>
+                                        <p className="price">{catItem.price}</p>
+                                        <button className="removeFromBasket" onClick={() => removeFromBasket(index)}>Remove from basket</button>
+                                    </div>                                    
                                 </div>
                             )
+                            // {props.basketData.reduce((catItem.price)=>
+                            //     )}
                         })}
                         
                     </div>
-                </div>
-            </div>
+                </div>   
         )
 }
 
