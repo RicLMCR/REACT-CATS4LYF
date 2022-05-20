@@ -11,54 +11,60 @@
 }
 
 * {
-  margin: 5px;
-  padding: 5px;
-
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: monospace;
 }
 
 body {
   background-color: var(--light);
-}
-
-.App {
-  display: flex;
-  flex-direction: row;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: space-around;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
+  font-size: 15vh;
+  padding:3vh;
   min-width: 60vh;
-  margin-bottom: 33vh;
-  margin-left: 10vh;
-  background-color: var(--primary);
-  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+  /* margin-bottom: 33vh;
+  margin-left: 10vh; */
 }
 
-.basket {
-  flex-direction: column;
-  flex-wrap: nowrap;
-  min-height: 100vh;
-  min-width: fit-content;
-  padding: 20px;
-  background-color: var(--primary);
-  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
-}
-
-.catBox {
-  justify-content: center;
-  align-self: center;
+.App {
+  width:100%;
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  border: 2px solid red;
+}
+.catContainer{
+  border: 2px solid black;
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.catSelection {/* 00000000000000000000 */
+  width: 100%;
+  border: 2px solid rgb(0, 38, 255);
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  min-height: 60vh;
-  max-width: 800px;
-  margin-left: 10vh;
-  border-radius: 30px;
-  background-color: var(--primary);
-  box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px;
+  /* align-self: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap; */
+  /* min-height: 60vh; */
+  /* max-width: 800px; */
+  /* margin-left: 10vh; */
+  /* border-radius: 30px; */
+  /* background-color: var(--primary); */
+  /* box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px; */
 }
 
 /* This is how we show a display box if needed for a stretch goal */
@@ -71,11 +77,12 @@ h1 {
 
 .catItem {
   flex: 1 1 1 30%;
-  width: 25%;
+  width: 200px;
+  /* width: 25%; */
   margin: 20px;
   font-size: 12px;
   background-color: var(--light);
-  box-shadow: 0px 4px 20px 2px black, 2px 2px 2px 2px;
+  box-shadow: 0px 4px 20px 2px rgb(222, 1, 1), 2px 2px 2px 2px;
 }
 
 img {
@@ -100,4 +107,17 @@ img {
 .addToBasket:hover {
   background-color: var(--primary);
   color: var(--dark);
+}
+
+
+/* Shopping Basket */
+.basket {
+  width: 30%;
+  height: 300vh;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  /* min-height: 100vh; */
+  /* min-width: fit-content; */
+  padding: 20px;
+  background-color: var(--secondary);
 }
