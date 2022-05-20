@@ -3,7 +3,9 @@ import {useEffect, useState} from 'react';
 import './App.css';
 import Images from './components/images';
 
+
 export function App() {
+  const [basket, setBasket] = useState([])
 
   return (
 
@@ -14,40 +16,41 @@ export function App() {
           <div className="catItem">
           <Images />
           </div>
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 2 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 3 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 4 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 5 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 6 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 7 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 8 Pic
 
-            <div className="addToBasket">Add to basket!</div>
+            <button className="addToBasket">Add to basket!</button>
           </div>
           <div className="catItem">Cat 9 Pic</div>
           </div>
-          </div>
+        </div>
 
 )}// End of App
+
 
 export default App;
