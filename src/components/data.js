@@ -28,8 +28,7 @@ const Data = (props)=>{
                     url:data[i].url,
                     name: faker.name.firstName(),
                     price: faker.finance.amount(60, 250, 0, '£')
-                    
-                
+
                 }
             }
             setCatPics(data);
@@ -44,24 +43,21 @@ const Data = (props)=>{
            return(
              <div>
                 <div className="catItem">            
-                  <p>{pic.name}</p>
-                  <p>{pic.price}</p>
-                  <img key={index} src={pic.url} alt="Random cat pic"/>
+                    <img className="mainImage" key={index} src={pic.url} alt="Random cat pic"/>
                         <div className='catInfo'>
                             <p>{pic.name}</p>
                             <p>{pic.price}</p>
-                        </div>    
+                        </div>
+                        <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
                 </div>
-                <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
-              </div>
+            </div>
+
            )
 
-           
+          
         }
         )
            //** function to push the 'pic.name' and 'pic.price' data into a new array (outside of the of the function). Then the 'putchase'buttn ncan add these values to that array onClick
-         
-  
     // commented this out. Function is now part of html tag in basket file
     // function addToBasket(pic) {
     // setBasket([...basket, pic.name, pic.price]);
