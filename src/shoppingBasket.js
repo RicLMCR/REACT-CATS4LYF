@@ -1,10 +1,11 @@
 import React from "react";
 import'/app.css';
 
+
 function shoppingBasket() {
     const [basket, setBasket] = useState([])
         return (
-            <div className="App">
+            <div>
                 <div className="basket">
                     <h1>Your Cats</h1>
                     <div>

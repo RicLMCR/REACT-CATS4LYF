@@ -4,17 +4,21 @@ import {useEffect, useState} from 'react';
 import faker from "@faker-js/faker"
 import { Git } from '@faker-js/faker/git';
 
-const Images = ()=>{
+const Data = ()=>{
+
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
     // Usestate for basketObjects
-    const [basket, setBasket] = useState([])
+    const addToBasket = (data) => {
+      setBasket([...basket, data]);
+    };
 
     // 'useEffect' to track changes and 'fetch' to pull images from API 
     useEffect(()=>{
         const fetchCatPics = async()=>{
             const response = await fetch('https://api.thecatapi.com/v1/images/search?limit=9');
-            // Loop through array and add additional key vaue pairs to the catPics object, including name, price etc
+
+            // Loop through array and add additional key vaue pairs to the catPics object - name, price etc
             const data = await response.json();
             for (let i=0; i < data.length; i++){
                 data[i]={
@@ -35,25 +39,32 @@ const Images = ()=>{
         const listObject = catPics.map((pic,index)=>{
         console.log({pic})
            return(
-             
+             <div>
                 <div className="catItem">            
-                    <img key={index} src={pic.url} alt="Random cat pic"/>
-                    <button className="addToBasket" onClick={() => addToBasket(cat)}>Add to basket!</button>
-                    <p>{pic.name}</p>
-                    <p>{pic.price}</p>
-                    
+                  <img key={index} src={pic.url} alt="Random cat pic"/>
+                  <p>{pic.name}</p>
+                  <p>{pic.price}</p>
                 </div>
-
+                <button className="addToBasket" onClick={() => addToBasket}>Add to basket!</button>
+              </div>
            )
-         }
+           function addToBasket (catPics)
+        }
+        
     )
-      
-return(
-    <div className="shoppingBasket">
-    <h1></h1>
-    <p>{listObject}</p>
-    </div>
-)// End of Images
-}
+    // function addToBasket(pic) {
+    // setBasket([...basket, pic.name, pic.price]);
+    // return (
+    //   <div>
+    //     <div className="basket"></div>
+    //   </div>;
 
-export default Images;
+  return (
+    <div className="catSelection">
+      {listObject}
+    </div>
+
+  );
+
+}// End of Images
+export default Data;
