@@ -44,20 +44,23 @@ const Data = (props)=>{
            return(
              <div>
                 <div className="catItem">            
-                    <img key={index} src={pic.url} alt="Random cat pic"/>
+                  <img key={index} src={pic.url} alt="Random cat pic"/>
                         <div className='catInfo'>
                             <p>{pic.name}</p>
                             <p>{pic.price}</p>
-                        </div>   
+                        </div>    
                 </div>
                 <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
               </div>
            )
 
-          
+           
         }
         )
            //** function to push the 'pic.name' and 'pic.price' data into a new array (outside of the of the function). Then the 'putchase'buttn ncan add these values to that array onClick
+
+         
+    )
 
     // commented this out. Function is now part of html tag in basket file
     // function addToBasket(pic) {
@@ -67,14 +70,11 @@ const Data = (props)=>{
     //     <div className="basket"></div>
     //   </div>;
 
-        return (
-            <div className="catSelection">
-            {listObject}
-            </div>
-        );
 
-
-
-
+  return (
+    <div className="catSelection">
+      {listObject}
+    </div>
+  );
 }// End of Images
 export default Data;
