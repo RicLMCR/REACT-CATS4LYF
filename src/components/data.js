@@ -28,7 +28,6 @@ const Data = (props)=>{
                     url:data[i].url,
                     name: faker.name.firstName(),
                     price: faker.finance.amount(60, 250, 0, '£')
-
                 }
             }
             setCatPics(data);
