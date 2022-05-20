@@ -2,8 +2,12 @@ import React from "react";
 import'./App.css';
 
 function ShoppingBasket(props) {
-    console.log(props.basketData);
-    
+    console.log(props.basketData)
+    const removeFromBasket = (index) => {
+        let remover = [...props.basketData]
+        remover.splice(index, 1)
+        props.setBasketFun(remover);
+    };
         return (
                 <div className="basket">
                     <h2>Your Selection</h2>
@@ -16,11 +20,13 @@ function ShoppingBasket(props) {
                                     <img className="basketImage" key={index} src={catItem.url} alt="cat basket"/>
                                     <div className="purchaseInfoContainer">
                                         <p>{catItem.name}</p>
-                                        <p>{catItem.price}</p>
-
+                                        <p className="price">{catItem.price}</p>
+                                        <button className="removeFromBasket" onClick={() => removeFromBasket(index)}>Remove from basket</button>
                                     </div>                                    
                                 </div>
                             )
+                            // {props.basketData.reduce((catItem.price)=>
+                            //     )}
                         })}
                         
                     </div>

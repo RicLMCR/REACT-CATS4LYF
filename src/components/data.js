@@ -7,11 +7,11 @@ const Data = (props)=>{
 
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
+    
     // Usestate for basketObjects
     const addToBasket = (data) => {
       props.setBasketFun([...props.basketData, data]);
     };
-
 
     //** array to store selected data - to be used by shopping basket */
     // const basketArray = [];
@@ -50,10 +50,7 @@ const Data = (props)=>{
                         <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
                 </div>
             </div>
-
            )
-
-          
         }
         )
            //** function to push the 'pic.name' and 'pic.price' data into a new array (outside of the of the function). Then the 'putchase'buttn ncan add these values to that array onClick

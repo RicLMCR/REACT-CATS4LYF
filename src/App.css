@@ -14,11 +14,11 @@
   --hot-pink-light: #F90093;
   --hot-pink-lightest: #ff78c7;
 
-  --primary: #f4d35e;
+  /* --primary: #f4d35e;
   --secondary: #f95738;
   --tertiary: #ee964b;
   --dark: #0d3b66;
-  --light: #faf0ca;
+  --light: #faf0ca; */
 }
 
 * {
@@ -41,7 +41,7 @@ h4 {
 }
 
 h1 {
-  font-size: 12vh;
+  font-size: 10vh;
   padding: 15vh 0 0 3vh;
   min-width: 60vh;
 }
@@ -182,6 +182,7 @@ h2 {
 .addToBasket:hover {
   background-color: var(--hot-pink-lightest);
   color: var(--white);
+  transition: .5s;
 }
 
 /************************************************* Shopping Basket ****************************************************/
@@ -223,4 +224,8 @@ h2 {
   width: 100px;
   object-fit: cover;
   border: 3px solid var(--hot-pink-lightest);
+}
+
+.price{
+  font-weight: 600;
 }
