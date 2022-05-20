@@ -9,15 +9,20 @@ function App() {
 
     <div className="App">
 
-      <div className="catContainer">
-        <h1>CATS4LYF</h1>
+        <div className="header">
+          <h1 id="mainHeader">CATS4LYFE</h1>
+          <h2>Get Your Floof Here!</h2>
+        </div>
+        <div className='content'> 
+          <div className="catContainer">
+    
+          <Data />
         
-        <Data />
-        
-      </div>
-    <div className="basket">
+          </div>
+          <div className="basket">
       
-    </div>
+          </div>
+        </div>   
 
     </div>
 
