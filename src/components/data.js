@@ -2,15 +2,14 @@ import React from 'react';
 import '../App.css';
 import {useEffect, useState} from 'react';
 import faker from "@faker-js/faker"
-import { Git } from '@faker-js/faker/git';
 
-const Data = ()=>{
+const Data = (props)=>{
 
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
     // Usestate for basketObjects
     const addToBasket = (data) => {
-      setBasket([...basket, data]);
+      props.setBasketFun([...props.basketData, data]);
     };
 
     // 'useEffect' to track changes and 'fetch' to pull images from API 
@@ -45,10 +44,10 @@ const Data = ()=>{
                   <p>{pic.name}</p>
                   <p>{pic.price}</p>
                 </div>
-                <button className="addToBasket" onClick={() => addToBasket}>Add to basket!</button>
+                <button className="addToBasket" onClick={() => addToBasket(pic)}>Add to basket!</button>
               </div>
            )
-           function addToBasket (catPics)
+           
         }
         
     )
