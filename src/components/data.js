@@ -13,7 +13,6 @@ const Data = (props)=>{
       props.setBasketFun([...props.basketData, data]);
     };
 
-
     //** array to store selected data - to be used by shopping basket */
     // const basketArray = [];
 

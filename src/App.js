@@ -17,10 +17,14 @@ function App() {
         </div>
         <div className='content'> 
           <div className="catContainer">
-            <Data setBasketFun={setBasket} basketData={basket}/>
+    
+          <Data setBasketFun={setBasket} basketData={basket} />
+        
           </div>
           <div className="basket">
-            <ShoppingBasket basketData={basket}/>
+
+          <ShoppingBasket basketData={basket} setBasketFun={setBasket}/>
+
           </div>
         </div>   
 
