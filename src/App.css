@@ -3,6 +3,17 @@
 }
 
 :root {
+  --white: #ffffff;
+  --black: #000000;
+  --charcole: #4e4e4e;
+
+  --mid-grey: #969A97;
+  --light-grey: #D6D1CD;
+  --lightest-grey: #E5ECE9;
+  --hot-pink-dark: #C60F7B;
+  --hot-pink-light: #F90093;
+  --hot-pink-lightest: #ff78c7;
+
   --primary: #f4d35e;
   --secondary: #f95738;
   --tertiary: #ee964b;
@@ -18,106 +29,194 @@
 }
 
 body {
-  background-color: var(--light);
-  margin: 0;
-  padding: 0;
+  background-color: var(--white);
+}
+
+/************************************************* Typefaces ****************************************************/
+h1,
+h2,
+h3,
+h4 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: 15vh;
-  padding:3vh;
+  font-size: 12vh;
+  padding: 15vh 0 0 3vh;
   min-width: 60vh;
-  /* margin-bottom: 33vh;
-  margin-left: 10vh; */
 }
 
-.App {
-  width:100%;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-around;
-  border: 2px solid red;
+h2 {
+  font-size: 4vh;
 }
-.catContainer{
-  border: 2px solid black;
-  width: 70%;
-  height: auto;
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5vh;
+}
+
+.header {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-image: url('./resources/catHeader.jpg');
+  background-position: right center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header>h1,
+h2 {
+  font-weight: 900;
+
+}
+
+.header>h1 {
+  color: var(--black);
+}
+
+.header>h2 {
+  color: var(--hot-pink-light);
+  padding: 1vh 0 0 3vh;
+}
+
+
+/************************************************* Main Components ****************************************************/
+
+.App {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: flex-start;
 }
 
-.catSelection {/* 00000000000000000000 */
+.content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5vh;
+}
+
+.header {
   width: 100%;
-  border: 2px solid rgb(0, 38, 255);
-  display:flex;
+  background-color: var(--white);
+}
+
+.catContainer {
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.catSelection {
+  width: 100%;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  /* align-self: center;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap; */
-  /* min-height: 60vh; */
-  /* max-width: 800px; */
-  /* margin-left: 10vh; */
-  /* border-radius: 30px; */
-  /* background-color: var(--primary); */
-  /* box-shadow: 0px 10px 20px 10px black, 10px 15px 20px 10px; */
 }
 
 /* This is how we show a display box if needed for a stretch goal */
-
 /* .display {
   position: absolute;
   display: hidden;
   overflow: hidden;
 } */
 
+
+/************************************************* Cat Selection ****************************************************/
 .catItem {
-  flex: 1 1 1 30%;
-  width: 200px;
-  /* width: 25%; */
-  margin: 20px;
+  /* flex: 1 1 1 30%; */
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  padding: 2vh;
+  margin: 0 2vh 2vh 2vh;
   font-size: 12px;
-  background-color: var(--light);
-  box-shadow: 0px 4px 20px 2px rgb(222, 1, 1), 2px 2px 2px 2px;
+  background-color: var(--lightest-grey);
 }
 
-img {
-  max-height: 50%;
-  max-width: 50%;
+.mainImage {
+  height: 150px;
+  width: 230px;
+  object-fit: cover;
 }
 
+.catInfo {
+  display: flex;
+  flex-direction: row;
+  padding: 1vh;
+}
+
+.catInfo>p {
+  margin: 1vh 4vh 1vh 0;
+  font-weight: 700;
+}
+
+/* This is the "add to basket!" button */
 .addToBasket {
+  border-style: none;
   position: relative;
   width: 120px;
   height: 25px;
-  margin: 10px;
-  background-color: var(--secondary);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 2vh;
+  background-color: var(--hot-pink-light);
   border-radius: 30px;
   color: white;
   font-weight: bold;
-  text-align: center;
   line-height: 18px;
-  box-shadow: 1px 1px 1px var(--secondary);
 }
 
 .addToBasket:hover {
-  background-color: var(--primary);
-  color: var(--dark);
+  background-color: var(--hot-pink-lightest);
+  color: var(--white);
 }
 
-
+/************************************************* Shopping Basket ****************************************************/
 /* Shopping Basket */
 .basket {
-  width: 30%;
-  height: 300vh;
+  width: 25%;
+  height: auto;
+  display: flex;
   flex-direction: column;
-  /* flex-wrap: nowrap; */
-  /* min-height: 100vh; */
-  /* min-width: fit-content; */
-  padding: 20px;
-  background-color: var(--secondary);
+  padding: 3vh 3vh 0 3vh;
+  background-color: var(--hot-pink-dark);
+}
+
+.basket>h2 {
+  font-size: 4vh;
+  color: var(--white);
+  padding-bottom: 3vh;
+}
+
+.purchaseSummary {
+  width: 40vh;
+  padding-bottom: 2vh;
+  color: var(--white);
+  display: flex;
+  border-bottom: 2px solid var(--hot-pink-lightest);
+  margin-bottom: 2vh;
+}
+
+.purchaseInfoContainer {
+  padding-left: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.basketImage {
+  height: 65px;
+  width: 100px;
+  object-fit: cover;
+  border: 3px solid var(--hot-pink-lightest);
 }
