@@ -12,8 +12,7 @@ function ShoppingBasket(props) {
                 <div className="basket">
                     <h2>Your Selection</h2>
                     <p>Quantity {props.basketData.length} </p>
-                    <p>Total amount to pay {total = props.basketData.catItem.price}</p>
-                    <div>
+                     <div>
                         {props.basketData.map((catItem, index) => {
                             return (
                                 <div className="purchaseSummary">

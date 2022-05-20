@@ -164,13 +164,13 @@ h2 {
 .addToBasket {
   border-style: none;
   position: relative;
-  width: 120px;
+  width: 100px;
   height: 25px;
   /* margin: 10px; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 2vh;
+  padding: 2vh;
   background-color: var(--hot-pink-light);
   border-radius: 30px;
   color: white;
