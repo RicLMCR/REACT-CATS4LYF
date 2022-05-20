@@ -8,6 +8,10 @@ const Data = ()=>{
     // Usestate for API objects
     const [catPics, setCatPics]=useState([]);
 
+
+    //** array to store selected data - to be used by shopping basket */
+    // const basketArray = [];
+
     // 'useEffect' to track changes and 'fetch' to pull images from API 
     useEffect(()=>{
         const fetchCatPics = async()=>{
@@ -34,11 +38,14 @@ const Data = ()=>{
            return(
                 <div className="catItem">            
                     <img key={index} src={pic.url} alt="Random cat pic"/>
-                    <div className="addToBasket">Add to basket!</div>
-                    <p>{pic.name}</p>
-                    <p>{pic.price}</p>
+                        <div className='catInfo'>
+                            <p>{pic.name}</p>
+                            <p>{pic.price}</p>
+                        </div>
+                    <div className="addToBasket">Add to basket!</div>    
                 </div>
            )
+           //** function to push the 'pic.name' and 'pic.price' data into a new array (outside of the of the function). Then the 'putchase'buttn ncan add these values to that array onClick
          }
     )
 
@@ -46,7 +53,6 @@ return(
     <div className="catSelection">
     {listObject}
     </div>
-
 )
 
 }// End of Images

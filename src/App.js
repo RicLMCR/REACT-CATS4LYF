@@ -11,7 +11,7 @@ function App() {
 
         <div className="header">
           <h1 id="mainHeader">CATS4LYFE</h1>
-          <h2>Get Your Floof Here!</h2>
+          <h2>Get your very own ball of floof!</h2>
         </div>
         <div className='content'> 
           <div className="catContainer">
