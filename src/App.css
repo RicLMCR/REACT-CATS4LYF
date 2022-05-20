@@ -48,6 +48,8 @@ h1 {
 
 h2 {
   font-size: 4vh;
+  padding: 1vh 0 0 3vh;
+  color: var(--hot-pink-light);
 }
 
 p {
@@ -164,6 +166,7 @@ h2 {
   position: relative;
   width: 120px;
   height: 25px;
+  /* margin: 10px; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -173,6 +176,7 @@ h2 {
   color: white;
   font-weight: bold;
   line-height: 18px;
+  /* box-shadow: 1px 1px 1px var(--secondary); */
 }
 
 .addToBasket:hover {
