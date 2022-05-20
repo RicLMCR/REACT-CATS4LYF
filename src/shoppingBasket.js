@@ -13,10 +13,12 @@ function ShoppingBasket(props) {
                                     <img className="basketImage" key={index} src={catItem.url} alt="cat basket"/>
                                     <div className="purchaseInfoContainer">
                                         <p>{catItem.name}</p>
-                                        <p>{catItem.price}</p>
+                                        <p className="price">{catItem.price}</p>
                                     </div>                                    
                                 </div>
                             )
+                            // {props.basketData.reduce((catItem.price)=>
+                            //     )}
                         })}
                         
                     </div>
