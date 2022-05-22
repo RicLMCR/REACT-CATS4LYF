@@ -232,3 +232,12 @@ h2 {
   font-weight: 600;
 }
 
+.removeFromBasket{
+  border-style: none;
+  background-color: var(--hot-pink-lightest);
+  width: 10vh;
+  color: var(--white);
+  margin-top: 2vh;
+  /* border-radius: 15px; */
+  
+}
