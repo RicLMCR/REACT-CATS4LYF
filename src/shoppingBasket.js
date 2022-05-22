@@ -19,7 +19,7 @@ function ShoppingBasket(props) {
                                     <div className="purchaseInfoContainer">
                                         <p>{catItem.name}</p>
                                         <p className="price">{catItem.price}</p>
-                                        <button className="removeFromBasket" onClick={() => removeFromBasket(index)}>Remove from basket</button>
+                                        <button className="removeFromBasket" onClick={() => removeFromBasket(index)}>Remove</button>
                                     </div>                                    
                                 </div>
                             )
