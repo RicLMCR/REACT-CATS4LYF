@@ -168,7 +168,7 @@ h2 {
   position: relative;
   width: 120px;
   height: 25px;
-  /* margin: 10px; */
+  margin: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;

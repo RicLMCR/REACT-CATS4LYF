@@ -23,7 +23,7 @@ function ShoppingBasket(props) {
                                     </div>                                    
                                 </div>
                             )
-                            // {props.basketData.reduce((catItem.price)=>
+                            // {props.basketData.reduce((catItem.price)=>****
                             //     )}
                         })}
                         
